@@ -5,6 +5,8 @@
 
 using namespace std;
 
+enum Chouce {BackToMenu = 1, Exit};
+
 void MainMenu() {
 	if (LangCheck())
 	{
@@ -121,9 +123,9 @@ bool MenuOrExit() {
 	}
 	cin >> userChoice;
 	userChoice = Check(userChoice);
-	if (userChoice == 1)
+	if (userChoice == BackToMenu)
 		return false;
-	else if (userChoice == 2)
+	else if (userChoice == Exit)
 		return true;
 	else {
 		if (LangCheck()) {

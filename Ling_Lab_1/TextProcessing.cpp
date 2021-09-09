@@ -19,7 +19,7 @@ void FindConsecutiveDigits(string text)
         {
             if (!currentDigitsFlag) {
                 currentCount = 0u;
-                currentDigits = "";
+                currentDigits = ""; 
             }
             currentDigits += currentSymbol;
             ++currentCount;

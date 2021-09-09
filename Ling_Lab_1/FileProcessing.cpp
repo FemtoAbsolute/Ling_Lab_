@@ -77,6 +77,7 @@ string CheckFileName(string filePath) {
             cout << "Invalid file name. Input new name: ";
         cin >> filePath;
     }
+
     if (ofstream(filePath, ios::out | ios::_Nocreate)) {
         if(LangCheck())
             cout << "Файл с таким именем уже существует. Выберите '1', чтобы перезаписать и '2', чтобы ввести другое имя: " << endl;
@@ -91,6 +92,7 @@ string CheckFileName(string filePath) {
                 cout << "Enter new name for file:" << endl;
             cin >> filePath;
             CheckFileName(filePath);
+            
         }
         else if (rewrite == Yes)
             return(filePath);
